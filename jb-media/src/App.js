@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+import { sampleAction } from './actions/sampleAction';
 
 class App extends Component {
   render() {
@@ -12,4 +15,12 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  ...state
+ })
+
+ const mapDispatchToProps = dispatch => ({
+  simpleAction: () => dispatch(sampleAction())
+ })
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
