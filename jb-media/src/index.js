@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
-import configureStore from './store';
+import configureStore from './reducers/store';
+import 'react-toastify/dist/ReactToastify.css';
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';
