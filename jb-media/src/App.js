@@ -1,29 +1,20 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
-import { sampleAction } from "./actions/sampleAction";
+import Signup from "./components/container/Auth/Signup";
 
 class App extends Component {
   render() {
     return (
+      <Router>
       <div className="App">
-        <header className="App-header">
-          <h1>Jay Bolt</h1>
-        </header>
+        <Switch>
+          <Route path="/signup" component={Signup} />
+        </Switch>
       </div>
+      </Router>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  ...state
-});
-
-const mapDispatchToProps = dispatch => ({
-  simpleAction: () => dispatch(sampleAction())
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
+export default App;
