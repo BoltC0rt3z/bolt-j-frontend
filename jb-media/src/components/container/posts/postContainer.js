@@ -32,12 +32,14 @@ class GetPosts extends Component {
                 {!this.state.posts?(
                     <p>No Posts found</p>
                 ):(
-                    <div className="col-sm-4">
-                        {this.state.posts && this.state.posts.map((post, index) =>(
-                            <div className="thumbnail" key={post.slug}>
-                            <p>{index}</p>
-                            <img  src={post.image_path} alt="post img" />
-                                <div>
+                    <div>
+                        {this.state.posts && this.state.posts.map((post) =>(
+                            <div className="col-sm-12 kadi" key={post.slug}>
+                                <div className="col-sm-12">
+                                <img  src={post.image_path} alt="post img" />
+                                <hr/>
+                                </div>
+                                <div className="center">
                                     {post.title}
                                     <hr/>
                                     {post.body}

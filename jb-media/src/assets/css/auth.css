@@ -331,5 +331,14 @@ li.init:after {
         padding: 50px 30px 70px 30px;
     }
 }
-
+.kadi{
+    margin-top: 60px;
+    border: 2px solid lightgrey;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+.gunav{
+    color:black;
+}
 /*# sourceMappingURL=style.css.map */
