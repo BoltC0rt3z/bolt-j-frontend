@@ -57,7 +57,7 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap';
-  import Signup from "../components/container/Auth/Signup";
+//   import Signup from "../components/container/Auth/Signup";
 
 export default class Example extends React.Component {
   constructor(props) {
