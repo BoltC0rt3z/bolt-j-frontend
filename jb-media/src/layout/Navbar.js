@@ -76,7 +76,7 @@ export default class Example extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="light" light expand="md">
+        <Navbar style={{backgroundColor: '#BDC3C7'}} light expand="md">
           <NavbarBrand href="/">JB-media</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
@@ -85,12 +85,11 @@ export default class Example extends React.Component {
               <NavLink href="#">Profiles</NavLink>
               </NavItem>
                    <NavItem>
-                        <NavLink href="#">Sign</NavLink>
+                        <NavLink href="#">Signin</NavLink>
                     </NavItem>
                      <NavItem>
                         <NavLink href="#">SignIn</NavLink>
                     </NavItem>
-                
             </Nav>
           </Collapse>
         </Navbar>

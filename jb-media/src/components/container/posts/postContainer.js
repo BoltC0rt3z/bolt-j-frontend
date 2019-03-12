@@ -33,7 +33,7 @@ class GetPosts extends Component {
             <img  src={post.image_path} alt="post img" className="emage" />
             <div className="card-body">
               <h5 className="card-title">{post.title}</h5>
-              <p className="card-text">{post.author.username}</p>
+              <p className="card-text">By: { post.author.username}</p>
             <p><small class="text-muted">{moment(post.created_at).fromNow()}</small></p>
             </div>
             </div>
