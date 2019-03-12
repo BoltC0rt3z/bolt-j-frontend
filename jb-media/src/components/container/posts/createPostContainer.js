@@ -56,6 +56,7 @@ export class CreatePost extends Component {
       body: body,
       image_path: image
     };
+    console.log(postData)
     this.props.createPost(postData);
   };
 

@@ -162,7 +162,7 @@ body {
 }
 
 .main {
-    padding: 270px 0;
+    padding: 180px 0;
     position: relative;
     background-image: url("../images/ipad.jpeg");
     background-repeat: no-repeat;
@@ -174,7 +174,7 @@ body {
     background-position: center center;
 }
 
-.container {
+.fom-container {
     width: 586px;
     background: #fff;
     margin-left: 165px;
@@ -186,7 +186,7 @@ body {
 }
 
 .appointment-form {
-    padding: 50px 60px 70px 60px;
+    padding: 30px 30px 10px 40px;
 }
 
 input, select {
@@ -209,7 +209,7 @@ input:focus, select:focus {
     width: auto;
     background: #4966b1;
     color: #fff;
-    padding: 16px 17px;
+    padding: 6px 8px;
     font-size: 13px;
     border: none;
     border-radius: 5px;
@@ -293,17 +293,6 @@ li.init:after {
     margin-bottom: 20px;
 }
 
-/* .select-list {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 55px;
-} */
-/* 
-.list-item {
-    position: absolute;
-    width: 100%;
-} */
 
 #confirm_type {
     z-index: 99;
@@ -314,13 +303,13 @@ li.init:after {
 }
 
 @media screen and (max-width: 1024px) {
-    .container {
+    .fom-container {
         margin: 0 auto;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .container {
+    .fom-container {
         width: calc(100% - 30px);
         max-width: 100%;
     }
@@ -351,5 +340,8 @@ li.init:after {
 }
 .postbtn{
     margin-top: 15px;
+}
+.emage{
+    height: 200px
 }
 /*# sourceMappingURL=style.css.map */

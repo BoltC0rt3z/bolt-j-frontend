@@ -15,7 +15,6 @@ const CreateForm = ({ ...props }) => {
     body,
     handleSubmit,
     onChange,
-    handleBodyChange,
     fileHandler
   } = props;
 
@@ -68,48 +67,32 @@ const CreateForm = ({ ...props }) => {
     //   </Grid>
     // </Container>
 
-
-    // <div className="row">
-    //     <div className="col-sm-7 center">
-    //         <form className="form-group" onSubmit={handleSubmit}>
-    //             <input
-    //                 focus
-    //                 name="title"
-    //                 value={title}
-    //                 onChange={onChange}
-    //                 type="text"
-    //                 placeholder=" Enter title"
-    //             />
-    //             <br/>
-    //             <input
-    //               focus
-    //               type="file"
-    //               placeholder="Enter Image"
-    //               onChange={fileHandler}
-    //             />
-    //             <br/>
-    //             <textarea>
-    //             <CKEditor
-    //                 content={body}
-    //                 events={{
-    //                 change: handleBodyChange
-    //                     }}
-    //                 />
-    //             </textarea>
-    //             <button className="ui medium basic black button" id="hover" type="submit">
-    //             Publish
-    //             </button>
-    //         </form>
-    //     </div>
-    // </div>
-        <form className="col-sm-7 fomu">
+        <form className="col-sm-7 fomu" onSubmit={handleSubmit}>
         <div class="form-group">
           <label for="title">Title</label>
-          <input type="text" class="form-control" id="title" placeholder="Title"/>
+          <input 
+          type="text" 
+          class="form-control" 
+          placeholder="Title" 
+          name="title" 
+          value={title} 
+          onChange={onChange}
+          />
           <label class="control-label ">Image:</label>
-          <input type="file" name="image" />
+          <input 
+          type="file" 
+          onChange={fileHandler}/>
           <label for="body">Post body</label>
-          <textarea class="form-control" id="body" rows="3" placeholder="post content"></textarea>
+          <textarea 
+          class="form-control" 
+          id="body" rows="3"
+          name="body" 
+          placeholder="post content" 
+          value={body} 
+          onChange={onChange}
+          // events={ {change: handleBodyChange}}
+          >
+          </textarea>
           <button type="submit" class="btn btn-success mb-2 postbtn">Post</button>
         </div>
       </form>

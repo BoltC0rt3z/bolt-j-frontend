@@ -2,7 +2,7 @@ import { Component } from "react";
 import React from 'react';
 import { connect } from "react-redux";
 import fetchPosts from "../../../actions/getPostActions";
-
+import moment from "moment"
 import PropTypes from 'prop-types';
 
 class GetPosts extends Component {
@@ -26,32 +26,33 @@ class GetPosts extends Component {
 
     render() {
         console.log(this.props)
+
+        let card = this.state.posts.map((post) =>(
+            <div class="col-sm-4 py-3">
+            <div className="card " key={post.slug}>
+            <img  src={post.image_path} alt="post img" className="emage" />
+            <div className="card-body">
+              <h5 className="card-title">{post.title}</h5>
+              <p className="card-text">{post.author.username}</p>
+            <p><small class="text-muted">{moment(post.created_at).fromNow()}</small></p>
+            </div>
+            </div>
+          </div>
+                ))
+
+
         return (
-            <div className="container">
-                <div className="col-md-12">
+            // <div className="container">
+            <div class="#">
                 {!this.state.posts?(
                     <p>No Posts found</p>
                 ):(
-                    <div>
-                        {this.state.posts && this.state.posts.map((post) =>(
-                            <div className="col-sm-12 kadi" key={post.slug}>
-                                <div className="col-sm-12">
-                                <img  src={post.image_path} alt="post img" />
-                                <hr/>
-                                </div>
-                                <div className="center">
-                                    {post.title}
-                                    <hr/>
-                                    {post.body}
-                                    <hr/>
-                                    <div>by {post.author.username}</div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+                    <div class="row">
+                    {card}
+                  </div>
                 )}
                 </div>
-            </div>
+            // </div>
         );
     }
 }
