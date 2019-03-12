@@ -2,13 +2,12 @@
 /* eslint-disable object-shorthand */
 /* eslint-disable react/prop-types */
 import React, { Component } from "react";
-import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import * as createPostActions from "../../../actions/createPost";
+import createPost from "../../../actions/createPost";
 import CreateForm from "../../posts/createPostsComponent";
 import imageUploader from "../../../actions/image";
 
-export class createPost extends Component {
+export class CreatePost extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,19 +17,19 @@ export class createPost extends Component {
     };
   }
 
-  componentDidMount() {
-    const { actions } = this.props;
-  }
+//   componentDidMount() {
+//     const { actions } = this.props;
+//   }
 
-  onChange = (event) => {
-    const { name, value } = event.target;
+  onChange = (e) => {
+    const { name, value } = e.target;
     this.setState({
       [name]: value
     });
   };
 
-  handleBodyChange = (event) => {
-    const content = event.editor.getData();
+  handleBodyChange = (e) => {
+    const content = e.editor.getData();
     this.setState({
       body: content
     });
@@ -57,7 +56,7 @@ export class createPost extends Component {
       body: body,
       image_path: image
     };
-    this.props.actions.createPost(postData);
+    this.props.createPost(postData);
   };
 
   render() {
@@ -84,10 +83,10 @@ export const mapStateToProps = state => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators(createPostActions, dispatch)
+    createPost: postData =>dispatch(createPost(postData))
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(createPost);
+)(CreatePost);

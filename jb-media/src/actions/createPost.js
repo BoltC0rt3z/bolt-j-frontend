@@ -19,10 +19,10 @@ const createPost = (postData) =>(dispatch)=>{
         data: postData
     })
     .then((res)=>{
-        dispatch(createPostSuccess(res.data))
+        dispatch(createPostSuccess(res))
     })
     .catch((err)=>{
-        dispatch(createPostFailure(err.response.data))
+        dispatch(createPostFailure(err.response))
     })
 
 }

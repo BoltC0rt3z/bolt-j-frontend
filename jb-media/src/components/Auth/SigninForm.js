@@ -43,7 +43,7 @@ export default class SigninForm extends Component {
                   name="submit"
                   id="submit"
                   class="submit"
-                  value="Login to Media"
+                  value="Login"
                 />
               </div>
             </form>
