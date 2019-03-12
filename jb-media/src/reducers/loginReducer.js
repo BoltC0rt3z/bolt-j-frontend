@@ -3,7 +3,7 @@ import { LOGIN_SUCCESS, LOGIN_ERROR } from "../actions/types";
 const states = {};
 
 const loginReducer = (state = states, action) => {
-  switch (action.types) {
+  switch (action.type) {
     // case LOGIN_SUCCESS:
     //   return {
     //     ...state,

@@ -30,7 +30,7 @@ export const loginUser = data => (dispatch) => {
       .then(response => {
         toast.success("Successfully Login");
         console.log(response.data)
-        // dispatch(loginSuccess(response.data));
+        dispatch(loginSuccess(response.data));
       })
       .catch(error => {
         console.log(error.response.data)
