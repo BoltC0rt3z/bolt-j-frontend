@@ -14,7 +14,7 @@ export default class SigninForm extends Component {
     return (
       <div class="signup-page">
         <div class="main">
-          <div class="container">
+          <div class="fom-container">
             <form onSubmit={handleSubmit} class="appointment-form" id="appointment-form">
               <h2  align="center" >Login</h2>
               <div class="form-group-1">
@@ -43,7 +43,7 @@ export default class SigninForm extends Component {
                   name="submit"
                   id="submit"
                   class="submit"
-                  value="Login to Media"
+                  value="Login"
                 />
               </div>
             </form>

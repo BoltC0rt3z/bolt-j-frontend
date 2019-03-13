@@ -12,7 +12,7 @@ class SignUpForm extends Component {
     } = this.props;
     return (
       <div class="main">
-        <div class="container">
+        <div class="fom-container">
           <form
             onSubmit={handleSubmit}
             class="appointment-form"
