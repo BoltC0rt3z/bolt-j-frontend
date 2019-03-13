@@ -348,8 +348,9 @@ li.init:after {
 }
 .prof{
     border: 1px solid lightgrey;
-    margin: 90px 20px 70px 30px;
-    padding: 20px 30px 70px 30px;
+    margin: auto;
+    margin-top: 10% !important;
+    padding: 50px 30px 70px 30px;
     border-radius: 9px;
 }
 /*# sourceMappingURL=style.css.map */
