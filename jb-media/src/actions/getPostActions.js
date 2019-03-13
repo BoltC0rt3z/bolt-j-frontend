@@ -1,6 +1,5 @@
 // import axios from "axios";
 import {GET_POST_SUCCESS, GET_POST_FAILURE } from "./types";
-// import {BASE_URL} from "./axiosConfig";
 import urlPath from "./unProtectedRouteUrl";
 
 export const fetchPostSuccess = (fetchedposts) =>({

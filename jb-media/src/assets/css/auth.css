@@ -346,4 +346,10 @@ li.init:after {
 .kudevide{
     margin: 30px 0px 0px 0px;
 }
+.prof{
+    border: 1px solid lightgrey;
+    margin: 90px 20px 70px 30px;
+    padding: 20px 30px 70px 30px;
+    border-radius: 9px;
+}
 /*# sourceMappingURL=style.css.map */

@@ -6,6 +6,7 @@ import Navbar from "./layout/Navbar"
 import Signup from "./components/container/Auth/Signup";
 import Signin from "./components/container/Auth/SignIn";
 import createArticles from "./components/container/posts/createPostContainer";
+import GetProfile from "./components/container/profile/getProfileContainer";
 import "./assets/css/auth.css";
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
           <Route path="/signup" component={Signup} />
           <Route path="/signin" component={Signin} />
           <Route path="/post" component={createArticles} />
+          <Route path="/profile" component={GetProfile} />
         </Switch>
       </div>
       </Router>
