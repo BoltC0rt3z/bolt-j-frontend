@@ -2,6 +2,7 @@ import { Component } from "react";
 import React from "react";
 import { connect } from "react-redux"
 import PropTypes from 'prop-types';
+import moment from "moment";
 
 import getProfile from "../../../actions/getProfileActions";
 const username = localStorage.getItem("username");
@@ -32,20 +33,20 @@ class GetProfile extends Component {
             return (
                 <div className="container">
                 <div className="col-sm-5 text-center prof responsive">
-                <div>
-                <img src={userProfile.image} alt="prof" style={{ width: "130px", height: "130px" }}/>
-                </div>
-                <div className="col-sm-12 text-left">
-                <div>Personal info <hr/> </div>
-                <div>Usernam: {userProfile.username}</div>
-                <div>Member since:{userProfile.created_at}</div>
-                <div>Fname: {userProfile.First_name}</div>
-                <div>Lname: {userProfile.Last_name}</div>
-                <div>Bio: {userProfile.bio}</div>
-                <div>Company: {userProfile.company}</div>
-                <div>Location: {userProfile.location}</div>
-                <div>Updated: {userProfile.updated_at}</div>
-                </div>
+                    <div>
+                    <img src={userProfile.image} alt="prof" style={{ width: "130px", height: "130px" }}/>
+                    </div>
+                    <div className="col-sm-12 text-left">
+                        <div>Personal info <hr/> </div>
+                        <div>Username: {userProfile.username}</div>
+                        <div>Member since: {moment(userProfile.created_at).fromNow()}</div>
+                        <div>Fname: {userProfile.First_name}</div>
+                        <div>Lname: {userProfile.Last_name}</div>
+                        <div>Bio: {userProfile.bio}</div>
+                        <div>Company: {userProfile.company}</div>
+                        <div>Location: {userProfile.location}</div>
+                        <div>Updated: {moment(userProfile.updated_at).fromNow()}</div>
+                    </div>
                 </div>
                 </div>
                 // <div className="container prof">
