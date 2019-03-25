@@ -3,6 +3,7 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { loginUser } from "../../../actions/loginAction";
 import SigninForm from "../../Auth/SigninForm";
+import { ToastContainer } from 'react-toastify';
 
 export class SignIn extends Component {
   constructor(props) {
@@ -28,7 +29,7 @@ export class SignIn extends Component {
       user: {
         email: email,
         password: password
-      }
+      }      
     };
 
     this.props.loginUser(userData);
@@ -45,16 +46,12 @@ export class SignIn extends Component {
           onChange={this.onChange}
           handleSubmit={this.handleSubmit}
         />
+        <ToastContainer />
       </div>
     );
   }
 }
 
-// export const mapStateToProps = state => ({
-//   email: state.createArticles,
-//   tags: state.createArticles,
-//   errors: state.errors
-// });
 
 export const mapDispatchToProps = dispatch => ({
   loginUser: bindActionCreators(loginUser, dispatch)

@@ -43,12 +43,14 @@ class Signup extends Component {
         e.preventDefault();
         const { user } = this.state;
             this.props.registerUser(user);
+            toast.success("Registered");
         
       };
 
     render(){
         const { user } = this.state;
         return (
+          <div>
             <SignUpForm
                 handleChange={this.handleChange}
                 handleSubmit={this.handleSubmit}
@@ -56,6 +58,8 @@ class Signup extends Component {
                 email={user.email}
                 password={user.password}
             />
+            <ToastContainer />
+            </div>
         );
     };
 };
