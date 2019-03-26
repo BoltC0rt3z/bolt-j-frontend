@@ -43,7 +43,6 @@ class Signup extends Component {
         e.preventDefault();
         const { user } = this.state;
             this.props.registerUser(user);
-            toast.success("Registered");
         
       };
 

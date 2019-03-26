@@ -5,9 +5,9 @@ import "../../assets/css/auth.css";
 
 export default class SigninForm extends Component {
   
-  notify = () => {
-    // toast.success("Login Success");
-  }
+  // notify = () => {
+  //   // toast.success("Login Success");
+  // }
   // notify = () => toast("Wow so easy !");
   render() {
     const {

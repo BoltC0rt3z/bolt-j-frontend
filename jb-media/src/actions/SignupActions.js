@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import urlPath from "./unProtectedRouteUrl";
 import { SIGNUP_SUCCESS, SIGNUP_FAILURE } from "./types";
 // import { ToastContainer, toast } from 'react-toastify';
@@ -21,15 +23,20 @@ export const registerUser = userdata => dispatch =>{
         data: { user: userdata}
     })
     .then((res)=>{
-        console.log(res.data);
+        // console.log(res.data);
         // i will check res content and correct this
         dispatch(signUpSuccess(res.data));
+        toast.success("Registered");
         // toast.success("registered");
     })
     .catch((err)=>{
+        if(err.status === 500){
+            toast.success("Registered");
+        }
+        toast.error("register failed");
         console.log((err.response.data.errors))
         // i will check err content and correct this
         dispatch(signUpError(err.response.data.errors)[0][0]);
-        // toast("register failed");
+        
     });
 };
